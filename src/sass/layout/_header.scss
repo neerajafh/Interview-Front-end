@@ -1,0 +1,142 @@
+/*   Header Start    */
+#header {
+	border-top: 1px solid $grey;
+	background: $black-bg;
+	width: 100%;
+	position: relative;
+
+	.header__outer {
+		display: grid;
+		padding: 1.1rem 0;
+	    grid-template-columns: 1fr 4fr auto;
+		grid-gap: 1rem;
+		margin: 0 auto;
+		width: 90%;
+
+		.header__brand {
+			align-self: center;
+
+			@media (max-width: 767px){
+				text-align: center;
+			}
+
+			a {
+				color: $white;
+
+				span {
+					color: $red;
+				}
+			}	
+		}
+
+		.header__nav {
+			text-align: right;
+			align-self: center;
+
+				.icon {
+				  display: none;
+				  color: $white;
+				  font-size: 1rem;
+
+				  @media (max-width: 767px){
+				  	display: block;
+				  	text-align: left;
+				  }
+				}
+
+			ul {
+				margin: 0px;
+				padding: 0px;
+				list-style: none;
+
+				li {
+					display: inline-block;
+					padding: 0 25px;
+
+					a {
+						color: $white;
+
+						&:hover {
+							opacity:0.8;
+						}
+					}
+				}
+
+				@media (max-width: 767px) {
+					position: absolute;
+					width: 100%;
+					left: 0;
+    				right: 0px;
+    				background: $black-bg;
+    				top: 100%;
+
+					li {
+						display: block;
+						padding-bottom: 1rem;
+						text-align: center;
+					}
+				}
+
+			}
+		}
+
+		.header__getInTouch {
+			text-align: right;
+
+			a {
+				padding: 10px 20px;
+				background: $red;
+				color: $white;
+				border-radius: 25px;
+				display: inline-block;
+				font-weight: 700;
+				align-items: center;
+
+				img {
+					margin-right: 5px; 
+					vertical-align: bottom;
+				}
+
+			}
+		}
+
+		@media (max-width: 767px){
+
+			#myTopnav {
+				display: none;
+			}
+
+			#myTopnav.topnav.responsive {
+				display: block;
+			}
+
+			.header__brand:nth-of-type(1) {
+			    order: 2;
+			}
+
+			.header__nav:nth-of-type(2) {
+				order: 1;
+			} 	
+
+			.header__getInTouch {				
+				&:nth-of-type(3) {
+					order: 3;
+				}
+
+				a {
+					background: none;
+					align-items: flex-end;
+				    display: flex;
+				    flex-flow: column-reverse;
+				    padding: 0px;
+
+					span {
+						display: none;
+					}
+				}
+			}
+		}
+	}	
+}
+
+/*   Header End    */

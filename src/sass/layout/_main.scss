@@ -1,0 +1,26 @@
+/*   Main Start    */
+
+#main__content {
+	display: grid;
+	width: 90%;
+	margin: 0 auto;
+	grid-template-columns: 1fr 1fr;
+
+	@media (max-width: 767px){
+	  grid-template-columns: 1fr;
+	  grid-template-rows: auto auto;	
+	}
+
+
+	.main_contentBox {
+		h2 {
+			margin-bottom: 1rem;
+		}
+
+		@media (max-width: 767px){
+			margin-bottom: 1rem;
+		}
+	}
+}
+
+/*   Main End    */

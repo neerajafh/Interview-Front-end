@@ -1,0 +1,91 @@
+/*   Banner Start    */
+
+#testimonial {
+	display: grid;
+	background: $grey;
+
+    h3 {
+		text-align: center;
+		margin-bottom: 1rem;
+	}
+
+	.testimonial__outer {
+		display: grid;
+		width: 90%;
+		margin: 0 auto;
+	    grid-template-rows: auto;
+	    grid-template-columns: auto;
+	    grid-gap: 1rem;
+
+		button {
+			display: none!important;
+		}
+
+		.testimonial__box {
+			margin-left: 1rem;
+			margin-right: 1rem;
+
+
+			&:first-child {
+				margin-right: 0px;
+			}
+
+			&:last-child {
+				margin-right: 0px;
+			}
+		}
+
+		.testimonial__comment {
+			background-color: $white;
+			box-shadow: 0 0 5px $grey;
+			box-shadow: 0 0px 3px #a09e9e;
+		    padding: 40px 30px;
+		    border-radius: 25px;
+		    margin: 5px;
+		    position: relative;
+
+		    p {
+		    	font-size: 1rem;
+		    }
+
+		    &:before {
+			  content: " ";
+			  position: absolute;
+			  background-image: url(../images/qt.png);	 
+			  height: 22px;
+		      width: 25px;
+		      background-repeat: no-repeat;
+		      background-position: 0px;
+		      left: 15px;
+		      top: 36px;   
+		    }
+
+
+
+		    &:after {
+			  content: " ";
+			  position: absolute;
+			  left: 30px;
+			  bottom: -15px;
+			  border-top: none;
+			  border-top: 20px solid $white;
+	          border-right: 0px solid transparent;
+	          border-left: 25px solid transparent;
+			}
+		}
+
+		.testimonial__auther {
+			display: flex;
+			margin-top: 25px;
+			margin-left: 35px;
+			
+			.testimonial__auther-details {
+				display: flex;
+			    align-items: center;
+			    padding-left: 1rem;
+			}
+		}
+	}	
+}
+
+/*   Header End    */
